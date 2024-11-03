@@ -12,6 +12,10 @@ tokenizer = AutoTokenizer.from_pretrained(model_path)
 class CodeInput(BaseModel):
     code: str
 
+@app.get("/")
+async def health_check():
+    return {"status": "running"}
+
 @app.post("/generate_javadoc")
 async def generate_javadoc(code_input: CodeInput):
     try:
