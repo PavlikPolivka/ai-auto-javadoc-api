@@ -1,1 +1,1 @@
-# ai-javadocker-api
+# ai-auto-javadoc-api
